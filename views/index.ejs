@@ -1,0 +1,11 @@
+<%- include("head") -%>
+<% listItem.forEach(function(item){ %>
+<ul>
+  <li><a href="/<%= item.name %>"><%= item.name %></a></li>
+</ul>
+<% }); %>
+<form class="" action="/" method="post">
+  <input type="text" name="create" value="" placeholder="create new todo list">
+  <button type="submit" name="button">Create</button>
+</form>
+<%- include("foot") -%>

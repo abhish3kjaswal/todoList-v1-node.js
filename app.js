@@ -44,7 +44,6 @@ const List= mongoose.model("List",listSchema);
 app.get("/",function(req,res){
 
 Item.find({},function(err, founditems){
-
   if(founditems.length === 0){
 
     Item.insertMany(defaultItems,function(err){
@@ -60,6 +59,7 @@ res.redirect("/");
   else{
 res.render("list",{ kindofday: "Today", newListitems:founditems});
 }
+
 });
 
 
@@ -145,13 +145,25 @@ if(!err){
 
 });
 
-let port = process.env.PORT;
-if (port == null || port == "") {
-  port = 3000;
-}
-app.listen(port);
 
-app.listen(port,function(){
-console.log("server started successfully");
 
+
+// let port = process.env.PORT;
+// if (port == null || port == "") {
+//   port = 3000;
+// }
+// app.listen(port);
+//
+// app.listen(port,function(){
+// console.log("server started successfully");
+//
+// });
+
+app.listen(3000,function(err){
+  if(err){
+    console.log(err);
+  }
+  else{
+    console.log("successfully started");
+  }
 });
