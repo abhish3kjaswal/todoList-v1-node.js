@@ -159,11 +159,12 @@ if(!err){
 //
 // });
 
-app.listen(3000,function(err){
-  if(err){
-    console.log(err);
-  }
-  else{
-    console.log("successfully started");
-  }
-});
+// app.listen(3000,function(err){
+//   if(err){
+//     console.log(err);
+//   }
+//   else{
+//     console.log("successfully started");
+//   }
+// });
+app.listen(process.env.PORT);
