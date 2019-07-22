@@ -148,16 +148,16 @@ if(!err){
 
 
 
-// let port = process.env.PORT;
-// if (port == null || port == "") {
-//   port = 3000;
-// }
-// app.listen(port);
-//
-// app.listen(port,function(){
-// console.log("server started successfully");
-//
-// });
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
+app.listen(port);
+
+app.listen(port,function(){
+console.log("server started successfully");
+
+});
 
 // app.listen(3000,function(err){
 //   if(err){
@@ -167,4 +167,6 @@ if(!err){
 //     console.log("successfully started");
 //   }
 // });
-app.listen(process.env.PORT);
+// app.listen(3000,function(){
+//   console.log("started");
+// });
